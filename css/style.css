@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Hind+Madurai:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
 .container {
-  width: 1200px;
+  width: 1155px;
   padding: 0 15px;
   margin: auto;
 }
 
+:root {
+  --bacl-deeppink: #F8EDF0;
+  --black: #000;
+  --opablak: #0f0101;
+  --white: #fff;
+  --fuchsia: #d64374;
+  --btnwhite: #fafafa;
+}
+
 body {
   min-height: 100vh;
-
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -15,30 +27,122 @@ main {
 }
 
 
+.btn {
+  background-color: var(--fuchsia);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 14px 50px;
+  font-family: Hind Madurai;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: var(--btnwhite);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.btn:hover {
+  border: 1px solid var(--fuchsia);
+  background: transparent;
+  color: var(--fuchsia);
+}
+
 /* SITE HERADER PART */
 
-#header-site {
-  
+
+.header {
+  padding-top: 10px;
+  background-color: var(--bacl-deeppink);
 }
 
-.site-header {
-
-}
-
-.herder-logo {
-
+.header__logo {
+  width: 79px;
+  height: 79px;
 }
 
 .header-nav {
-
+  margin-left: 266px;
 }
 
-.herder-nav-list {
-
+.header-nav__list {
+  list-style-type: none;
 }
 
-.herder-nav-item {
+.header-nav__item {
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.6;
+  margin-right: 40px;
+}
 
+.header-nav__item:last-child {
+  margin-right: 0px;
+}
+
+.header-nav__link {
+  text-decoration: none;
+  color: var(--opablak);
+}
+
+.activ {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--fuchsia);
+}
+
+.header-btn {
+  margin-left: 172px;
+}
+
+
+/* HERO PART  */
+
+.hero {
+  position: relative;
+  padding-top: 50px;
+}
+
+.hero__main {
+  width: 665px;
+}
+
+.hero__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: var(--opablak);
+  margin-bottom: 6px;
+}
+
+.hero__title {
+  font-family: Fredoka One;
+  font-weight: 500;
+  font-size: 57.33px;
+  line-height: 120.5%;
+  color: var(--opablak);
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+.hero__span {
+  color: var(--fuchsia);
+}
+
+.hero__desc {
+  width: 523px;
+  font-family: Hind Madurai;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--opablak);
+  opacity: 0.6;
+  margin-bottom: 50px;
+}
+
+.hero__img {
+  object-fit: cover;
 }
 
 /* SITE HERADER PART END */
@@ -47,12 +151,605 @@ main {
 /* SITE MAIN PART  */
 
 
+/* MAIN AD  */
 
+.ad {
+  padding: 100px 0px;
+}
+
+.ad__list {
+  list-style-type: none;
+}
+
+.ad__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 7px;
+  padding: 27px 26px;
+}
+.ad__item:hover {
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.03);
+}
+
+.ad__title {
+  font-family: Hind Madurai;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.before::before, .quick::before, .cash::before, .fast::before  {
+  content: '';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 33%;
+  width: 51px;
+  height: 43px;
+  background-image: url('../imgs/free.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 23px;
+}
+
+.quick::before {
+  width: 32px;
+  height: 42px;
+  background-image: url('../imgs/quick.svg');
+}
+
+.cash::before {
+  width: 44px;
+  height: 44px;
+  background-image: url('../imgs/cash-back-icon.svg');
+}
+
+.fast::before {
+  width: 54px;
+  height: 54px;
+  background-image: url('../imgs/fast-delivery-icon.svg');
+  margin-bottom: 14px;
+}
+
+
+.ad__desc {
+  font-family: Hind Madurai;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--black);
+  opacity: 0.6;
+}
+/* MAIN SUGAR  */
+
+.sugar {
+  position: relative;
+  background-color: var(--bacl-deeppink);
+}
+
+.sugar__main {
+  width: 442px;
+  margin-right: 74px;
+}
+
+.sugar__title {
+  font-weight: 600;
+  font-size: 44.2px;
+  line-height: 49px;
+  color: #150101;
+  margin-bottom: 16px;
+}
+
+.sugar__desc {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  opacity: 0.6;
+  margin-bottom: 35px;
+}
+
+.sugar__btn {
+  padding: 15px 41px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--btnwhite);
+}
+
+.sugar__img {
+  width: 550px;
+  height: 600px;
+}
+
+
+/* MAIN PRODUCT */
+
+.product {
+  padding: 137px 0px;
+}
+
+.our {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our__title {
+  font-family: Hind Madurai;
+  font-weight: 600;
+  font-size: 44.2px;
+  line-height: 61px;
+  color: var(--opablak);
+  margin-bottom: 64px;
+}
+
+.our__list {
+  list-style-type: none;
+}
+
+.our__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+  margin-right: 40px;
+}
+.our__item:last-child {
+  margin-right: 0px;
+}
+
+.our__link {
+  color: var(--black);
+  opacity: 0.6;
+  text-decoration: none;
+}
+.our--activ {
+  opacity: 1;
+  border-bottom: 3px solid var(--fuchsia);;
+}
+
+.product__list {
+  list-style-type: none;
+}
+
+.product__item {
+  margin-bottom: 30px;
+}
+
+.product__item:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.product__img {
+  width: 580px;
+  height: 415px;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.product__main {
+  width: 454px;
+}
+
+.product__item:nth-child(2) .product__main {
+  text-align: right;
+}
+
+.product__title {
+  font-family: Hind Madurai;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--black);
+  margin-bottom: 11px;
+}
+
+.product__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  opacity: 0.7;
+  margin-bottom: 28px;
+}
+
+.product__price {
+  font-family: Hind Madurai;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+.product__sale {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-decoration-line: line-through;
+  opacity: 0.7;
+}
+
+.product__btn {
+  padding: 15px 46px;
+}
+
+.users {
+  padding-top: 82px;
+}
+
+.users__boxs {
+  width: 344px;
+  text-align: left;
+}
+
+.users__box {
+  margin-bottom: 46px;
+}
+
+.users__avatar {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  margin-right: 21px;
+}
+
+.users__main {
+
+}
+
+.users__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.users__state {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--black);
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.users__desc {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  opacity: 0.7;
+  margin-bottom: 56px;
+}
+
+.users__desc::before, .users__desc::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 11px;
+  background-image: url('../imgs/back-quotation-left.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-right: 10px;
+}
+
+.users__desc::after {
+  background-image: url('../imgs/back-quotation-rught.svg');
+  margin-left: 10px;
+}
+
+.users__list {
+  list-style-type: none;
+}
+
+.users__item {
+  width: 35px;
+  width: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.users__item:nth-child(4) {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+}
+
+.users__list-img {
+  width: 35px;
+  width: 35px;
+  object-fit: cover;
+}
+.users__item:nth-child(4) .users__list-img {
+  width: 59px;
+  width: 59px;
+  object-fit: cover;
+}
+
+.users__img {
+  width: 564px;
+  height: 442px;
+  object-fit: cover;
+}
+
+.bxs-chevron-left, .bxs-chevron-right {
+  font-size: 24px;
+  color: var(--fuchsia);
+}
+
+/* MAIN FOOD  */
+
+.food {
+  background-color: var(--bacl-deeppink);
+  padding-top: 59px;
+  padding-bottom: 144px;
+}
+
+.food__box {
+  /* position: relative; */
+}
+
+.food__imgbox {
+  position: relative;
+  width: 305px;
+}
+
+.food__img {
+  position: absolute;
+}
+
+.food__main {
+  width: 621px;
+}
+
+.food__title {
+  font-weight: 500;
+  font-size: 44.2px;
+  line-height: 52px;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.food__desc {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  color: var(--opablak);
+  opacity: 0.7;
+  margin-bottom: 29px;
+}
+
+.food__list {
+  list-style-type: none;
+  margin-bottom: 24px;
+}
+
+.food__item {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.food__item::before, .add::before, .order::before {
+  content: '';
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background: #fff;
+  background-image: url('../imgs/select-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 10px;
+}
+
+.add::before {
+  background-image: url('../imgs/add-icon.svg');
+}
+
+.order::before {
+  background-image: url('../imgs/order-icon.svg');
+}
+
+.food__link {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.food__app {
+  margin-right: 7px;
+  margin-left: -15px;
+}
+
+
+/* MAIN HAVE PART  */
+
+
+.have {
+  padding-top: 191px;
+  padding-bottom: 129px;
+}
+
+.have__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.have__title {
+  width: 522px;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 28px;
+}
+
+.have__form {
+  width: 637px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+.have__input {
+  width: 79%;
+  background: none;
+  border: none;
+  padding: 29px;
+  padding-right: 0px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.have__input:focus {
+  outline: none;
+  font-size: 18px;
+}
+
+.have__btn {
+  padding: 29px 46px;
+}
 
 /* SITE MAIN END PART */
 
 
 /* SITE FOOTER PART  */
 
+.footer {
+  background-color: var(--black);
+  padding-top: 70px;
+  padding-bottom: 104px;
+}
 
+.footer__main {
+  width: 207px;
+}
+
+.footer__logo {
+  width: 79px;
+  height: 79px;
+  margin-bottom: 9px;
+}
+
+.footer__desc {
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.footer__floww {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white);
+}
+
+.socical {
+  list-style-type: none;
+}
+
+.socical__item {
+  margin-right: 10px;
+}
+
+.footer__nav {
+  margin-left: 37px;
+}
+
+.footer__list {
+  list-style-type: none;
+  padding-top: 79px;
+  margin-right: 132px;
+}
+
+.footer__item {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.footer__item:last-child {
+  margin-bottom: 0px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white);
+  opacity: 0.7;
+}
+
+.footer__box {
+  width: 388px;
+  margin-left: 19px;
+  padding-top: 79px;
+}
+
+.footer__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white);
+  margin-bottom: 13px;
+}
+
+.footer__form {
+  width: 388px;
+  opacity: 0.5;
+  border: 2px solid #D64374;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.footer__email {
+  width: 67%;
+  background: none;
+  border: none;
+  padding: 20px 32px;
+  padding-right: 0px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--white);
+  opacity: 0.6;
+}
+.footer__email:focus {
+  outline: none;
+  color: var(--white);
+  opacity: 1;
+}
+
+
+.footer__btn {
+  padding: 16px 18px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.footer__partner {
+  list-style-type: none;
+}
+
+.footer__partneritem {
+  margin-right: 15px;
+}
 /* SITE FOOTER PART END */
